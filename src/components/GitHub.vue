@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <img id="logo" src="../assets/logo.png"/>
     <h1>{{ msg }}</h1>
     <form v-on:submit.prevent="queryGitHub(query)">
       <input type="text" placeholder="Github username" v-model="query" />
@@ -49,6 +50,7 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica Arial, Sans-serif;
 }
 .results {
   margin:30px 150px;
@@ -69,13 +71,33 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: rgba(10, 180, 180, 1);
   text-decoration: none;
+}
+input{
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .05);
+  color: black;
+  outline: none;
+  border-radius: 25px;
+  text-align: center;
 }
 @media (max-width: 600px) {
   .results img {
     float:center;
-    margin:0px -138px 20px;
+    margin:0px -130px 20px;
   }
+}
+
+#logo {
+  margin-top:-14px;
+  height: 100px;
 }
 </style>

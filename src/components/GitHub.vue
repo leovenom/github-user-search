@@ -93,9 +93,15 @@ input{
   .results img {
     float:center;
     margin:0px -130px 20px;
+    width: 87vw;
+  }
+  .results .info  {
+    display: grid;
+    justify-content: center;
+     margin:0px -130px 20px;
+     padding-top: 0;
   }
 }
-
 #logo {
   margin-top:-14px;
   height: 100px;
